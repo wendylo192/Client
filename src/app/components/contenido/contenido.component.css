@@ -1,18 +1,32 @@
+
+.contenido {
+  grid-area: carrusel;
+  width: 330px;
+  height: 350px;
+  position: relative;
+  margin: 0 auto 10px;
+  perspective: 7500px;
+}
+
+​ .container {
+  width: 330px;
+  height: 350px;
+  position: relative;
+  margin: 0 auto 10px;
+  perspective: 7500px;
+}
+
 .nav-container {
   display: grid;
-  width: 100vw;
-  height: 100vh;
+  grid-template-columns: 100%;
   grid-template-rows: 20% 1fr;
-  grid-template-areas: "menu" 
-                       "carrusel";                    
+  grid-template-areas: 
+  "menu" 
+  "carrusel";                    
 }
 
 .nav {
   grid-area: menu;
-}
-
-.contenido {
-  grid-area: carrusel;
 }
 
 .nav ul {
@@ -40,84 +54,14 @@ a {
   color: #fff;
 }
 
-nav {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-​ nav ul {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-​ nav li {
-  float: left;
-}
-
-​ nav a {
-  float: left;
-  color: #eee;
-  margin: 0 5px;
-  padding: 3px;
-  text-decoration: none;
-  border: 1px solid #831608;
-  font: bold 14px Arial, Helvetica;
-  background-color: #e4948a;
-  background-image: linear-gradient(#bb413b, #d88b81);
-  border-radius: 5px;
-  text-shadow: 0 -1px 0 rgba(228, 133, 133, 0.8);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 3px 0 rgba(0, 0, 0, 0.7), 0 2px 2px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-}
-
-​ nav a:hover {
-  background-color: #9c85c7;
-}
-
-​ ​ nav span {
-  border: 1px dashed #eba1a3;
-  display: inline-block;
-  padding: 4px 15px;
-  cursor: pointer;
-  background-color: #bb413b;
-  background-image: linear-gradient(#d4463c, #aa2618);
-}
-
-​ nav a:hover span {
-  background-color: #bb413b;
-  background-image: linear-gradient(#aa2618, #d4463c);
-}
-
-​ ​ .contenido {
-  background-color: darkgrey;
-  width: auto;
-  height: 550px;
-}
-
-​ .container {
-  width: 330px;
-  height: 350px;
-  position: relative;
-  margin: 0 auto 10px;
-  perspective: 7500px;
-}
-
-​ #carousel {
+#carousel {
   width: 100%;
   height: 100%;
   position: relative;
-  transform: translateZ( -888px);
+  transform: translateZ( -888px );
   transform-style: preserve-3d;
   transition: transform 1s;
 }
-
 #carousel figure {
   display: block;
   position: absolute;
@@ -125,7 +69,7 @@ nav {
   height: 90%;
   left: 10px;
   top: 10px;
-  border: 2px solid rgba( 0, 0, 0, 0.8);
+  border: 2px solid rgba(   0, 0, 0, 0.8 );
   line-height: 116px;
   font-size: 80px;
   font-weight: bold;
@@ -134,43 +78,33 @@ nav {
   margin: 0;
 }
 
-​ #carousel figure:nth-child(1) {
-  transform: rotateY( 0deg) translateZ( 288px);
+#carousel figure:nth-child(1) {
+  transform: rotateY( 0deg ) translateZ( 288px );
 }
-
 #carousel figure:nth-child(2) {
-  transform: rotateY( 60deg) translateZ( 288px);
+  transform: rotateY( 60deg ) translateZ( 288px );
 }
-
 #carousel figure:nth-child(3) {
-  transform: rotateY( 120deg) translateZ( 288px);
+  transform: rotateY( 120deg ) translateZ( 288px );
 }
-
 #carousel figure:nth-child(4) {
-  transform: rotateY( 180deg) translateZ( 288px);
+  transform: rotateY( 180deg ) translateZ( 288px );
 }
-
 #carousel figure:nth-child(5) {
-  transform: rotateY( 240deg) translateZ( 288px);
+  transform: rotateY( 240deg ) translateZ( 288px );
 }
-
 #carousel figure:nth-child(6) {
-  transform: rotateY( 300deg) translateZ( 288px);
+  transform: rotateY( 300deg ) translateZ( 288px );
 }
 
-​ #carousel {
+#carousel {
   animation: rotateInY 20s infinite linear;
 }
-
 @keyframes rotateInY {
-  0% {
-    transform: translateZ(-288px) rotateY(0deg);
-  }
-  100% {
-    transform: translateZ(-288px) rotateY(360deg);
-  }
+0%   { transform: translateZ(-288px) rotateY(0deg);   }
+100% { transform: translateZ(-288px) rotateY(360deg);    }
 }
 
-​ #carousel:hover {
+#carousel:hover{
   animation-play-state: paused;
-}
+ }
