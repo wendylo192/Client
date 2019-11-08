@@ -1,74 +1,75 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-html, body {
-  background: #2B2E4A;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  max-width: 100%;
-  font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
+html,
+body {
+    background: #2B2E4A;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    max-width: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
-.left {
-  float: left;
-}
 
-.center {
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-}
-
+/* 
 .wrapper {
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 50px 80% auto 100px;
-  grid-template-areas: "header header" "slider slider" "content sidebar" "footer footer";
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 80% auto 100px;
+    grid-template-areas: "header" 
+                        "carrusel" 
+                        "publicidad" 
+                        "contenido" 
+                        "footer";
 }
 
 .header {
-  grid-area: header;
+    grid-area: header;
+}
+
+.carrusel{
+    grid-area: carrusel;
+}
+
+.publicidad{
+    grid-area:publicidad;
+}
+
+.contenido{
+    grid-area: contenido;
 }
 
 .slider {
-  grid-area: slider;
-  display: flex;
-  align-items: center;
-  align-content: space-between;
-  padding-left: 5em;
-  position: relative;
+    grid-area: slider;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    padding-left: 5em;
+    position: relative;
 }
 
 .sidebar {
-  display: grid;
-  grid-area: sidebar;
-  grid-gap: 5vw;
-  color: #eee;
-  justify-content: center;
-  text-align: center;
-  background: #ddd;
+    display: grid;
+    grid-area: sidebar;
+    grid-gap: 5vw;
+    color: #eee;
+    justify-content: center;
+    text-align: center;
+    background: #ddd;
 }
 
 .content {
-  grid-area: content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer {
-  display: flex;
-  justify-content: space-evenly;
-  grid-area: footer;
-  background: #4e4e4e;
-  color: #eeeeee;
-  padding-top: 3rem;
-  padding-bottom: 10rem;
-}
+    grid-area: footer;
+} */
