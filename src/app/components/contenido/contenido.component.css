@@ -1,0 +1,25 @@
+
+  .nav ul {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    width: 80%;
+    margin:0 auto;
+    font-size: 1.5rem;
+  }
+
+  .nav li {
+      background: #903749;
+      padding: .5rem;
+      width: 12vh;
+      min-width: 125px;
+      border-radius: 5px;
+  }
+
+  a {
+      text-decoration: none;
+      color: #fff;
+  }
