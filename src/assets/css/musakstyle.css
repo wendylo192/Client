@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css?family=Marvel&display=swap');
+*{
+	margin: 0;
+    padding: 0;
+	font-family: 'Marvel', sans-serif;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ 
+.contenedor {
+	background:#151729;
+	width:100%;
+	max-width:1500px;
+    margin:auto;
+ 
+	/* Insercion de Flexbox */
+	display:flex; 
+	flex-flow:row wrap; /* Forma abreviada de direction y wrap */
+}
+ 
+body {
+	background:rgb(218, 223, 238);
+}
+ 
+header {
+	background:#ffffff;
+	width:100%;
+	padding:20px;
+ 
+	/* Insercion de Flexbox */
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+ 
+	flex-direction:row; /* Forma tradicional de direction y wrap */
+    flex-wrap:wrap;
+    position: relative;
+}
+ 
+header .logo {
+	color:#fff;
+	font-size:30px;
+}
+ 
+/* Configuración de encabezado conociendo mediciones */
+
+header .logo img {   
+    width:200px;
+    border-radius:10px;
+	vertical-align: top;
+}
+ 
+header .logo a {
+	color:#fff;
+	text-decoration: none;
+	line-height:40px;
+}
+ 
+/* Configuración de menu de navegación */
+
+header nav {
+    width:50%;
+    
+/* Insercion de Flexbox */
+ 
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+ 
+header nav a {
+    border-radius:5px;
+	background:#151729;
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+    padding:10px;
+
+/* Insercion de Flexbox */
+
+	flex-grow:1; /* para abarcar el tamaño que se requiere en 100% */
+}
+ 
+header nav a:hover {
+    background:#c00202;
+    border-radius:5px;
+}
+
+/* DISEÑO DE BANNER */
+
+ul,ol{
+	list-style: none;
+}
+
+.slideshow{
+    width: 100%;
+    height: 20%;
+	position: relative;
+}
+
+.slider li, ul{
+	width: 100%;
+}
+
+.slider li{
+	overflow: hidden;
+}
+
+.slider li img{
+	width: 1500px;
+	height: 50%
+}
+
+.slider .caption{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding: 15px 50px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	text-align: center;
+	color: #fff;
+	z-index: 1;
+}
+
+.slider .caption h1{
+	font-size: 50px;
+}
+
+.slider .caption p{
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+.pagination{
+	position: absolute;
+	top: 100%;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+}
+
+.pagination li{
+	font-size: 20px;
+	margin: 2px 5px;
+	color: #858585;
+	cursor: pointer;
+}
+
+
+.caption a {
+    border-radius:5px;
+	background:#151729;
+	color:#fff;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+    padding:10px;
+
+}
+ 
+.caption a:hover {
+    background:#c00202;
+    border-radius:5px;
+}
+
+.left, .right{
+	position: absolute;
+	top: 0;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+
+	color: #fff;
+	font-size: 35px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.left{
+	left: 10px;
+}
+
+.right{
+	right: 10px;
+}
+
+
+@media screen and (max-width: 600px){
+	.slider .caption p{
+		display: none;
+	}
+
+	.slider .caption h1{
+		font-size: 35px;
+	}
+
+	.left, .right{
+		font-size: 30px;
+	}
+
+	.slider li img{
+		width: 600px;
+	}
+
+	.pagination{
+		display: none;
+	}
+}
+
+/* Configuracion de la Seccion de Información */
+.main {
+	background-image: url("../IMG/white-noise.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-color: transparent;
+	
+	padding:20px;
+	margin-top: 35px;
+ 
+	flex:1 1 70%;
+	/*flex:1;*/
+
+}
+
+.main h2:hover{
+	color: #fff;
+	background: rgba(45, 166, 170, 0.5);
+	border-radius: 5px;
+	scroll-margin-right: 35px;
+}
+ 
+.main article {  /* Agrega la linea entre elementos */
+	margin-bottom: 20px;
+	padding-bottom:20px;
+	border-bottom:1px solid rgb(66, 63, 78);
+}
+
+
+.main article:nth-last-child(1){
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom:none;
+}
+
+.main img {
+	border: 2px solid white;
+	border-radius:10px;
+	flex:1 1 20%;
+	/*flex:0 0 300px;*/
+ 
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	justify-content:center;
+}
+
+.main .caratula{
+	float:left;
+	margin-right: 20px;
+}
+
+.main .albumes{
+	margin: 20px;
+}
+
+/* Diseño Aside*/
+aside {
+	margin-top: 35px;
+	background:url('../IMG/colorful.jpg') #751606;
+	background-position: center;
+    background-size: cover;
+	background-blend-mode: multiply;
+	
+	padding:20px;
+	border-radius: 10px;
+	
+/* Insercion de Flexbox con ajuste de tamaño proporcional */
+
+	flex:1 1 20%;
+	/*flex:0 0 300px;*/ 
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	justify-content:center;
+}
+
+/* DISEÑO DE WIDGET LATERAL */
+ 
+aside .widget {
+	color: #fff;
+	border: 1px solid #CD6E2E;
+	height:350px;
+	margin:10px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.imagen img {
+    padding: auto;
+	margin: auto;
+    width: 180px;
+    height: 180px;
+	border-radius: 50%;
+	border: 5px solid gray;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+}
+
+.imagen2 img {
+    padding: auto;
+	margin: auto;
+	margin-top: 30px;
+	right:6.9%;
+    width: 300px;
+    height: 250px;
+	border-radius: 10%;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+}
+
+.button {
+	display: block;
+	position: absolute;
+	height: 3rem;
+	right:7%;
+	padding-top: 0.8rem;
+	width: 9rem;
+	text-align: center;
+	color: rgb(192, 189, 197);
+	border: #CD6E2E solid 0.1rem;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all .5s;
+	flex-grow:1; 
+	border-radius:10px;
+  }
+  
+  .container a:hover {
+	background: #151729;
+	color: #fff !important;
+  }
+
+
+/* Configuracion de la Seccion de Footer */
+footer {
+	background: #151729;;
+	width:100%;
+	padding:20px;
+ 
+	/* Insercion de Flexbox */
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+ 
+
+footer .social a:hover {
+	border-radius:5px;
+	background:#c00202;
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+
+
+/* Insercion de Flexbox */
+
+	flex-grow:1; /* para abarcar el tamaño que se requiere en 100% */
+}
+ 
+footer .social {
+	border-radius:5px;
+	background:#D7DBDD;
+	color:#151729;
+	text-align: center;
+	text-decoration: none;
+    padding:5px;
+
+}
+ 
+footer .social a {
+	color:#151729;
+	text-decoration: none;
+	padding:10px;
+	display: inline-block; /* Se inserto ya que no se uso flexbox y para que el elemento quede al lado del menu inferior */
+}
+
+.piepagina p{
+	color:#fff;
+	background: black;
+	text-align: center;
+}
+
+ 
+
