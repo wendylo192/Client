@@ -1,9 +1,136 @@
-<div class="nav">
+<div class="nav-container">
+    <div class="nav">
+        <ul>
+            <li id="menu-todos"><a onclick="javascript:mostrar(1)">Todos</a></li>
+            <li id="menu-romance"><a onclick="javascript:mostrar(2)">Romance</a></li>
+            <li id="menu-drama"><a onclick="javascript:mostrar(3)">Drama</a></li>
+            <li id="menu-comedia"><a onclick="javascript:mostrar(4)">Comedia</a></li>
+            <li id="menu-anime"><a onclick="javascript:mostrar(5)">Anime</a></li>
+        </ul>
+    </div>
+
+    <div class="contenido">
+        <!--     <nav>
     <ul>
-        <li id="menu-todos"><a href="#">Todos</a></li>
-        <li id="menu-romance"><a class="active" href="#">Romance</a></li>
-        <li id="menu-drama"><a href="#">Drama</a></li>
-        <li id="menu-comedia"><a href="#">Comedia</a></li>
-        <li id="menu-anime"><a href="#">Anime</a></li>
+        <li><a ><span>TODOS</span></a></li>
+        <li><a ><span>ROMANCE</span></a></li>
+        <li><a ><span>DRAMA</span></a></li>             
+        <li><a onclick="javascript:mostrar(4)"><span>COMEDIA</span></a></li>
+        <li><a onclick="javascript:mostrar(5)"><span>ANIME</span></a></li>
     </ul>
+    </nav> -->
+        <br>
+        <section class="container">
+            <div id="todos" style="display:block;">
+                <div id="carousel">
+                    <figure>
+                        <img src="../../../assets/img/peli1.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli1.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/pelicula1.jpeg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli1.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/pelicula1.jpeg" width="330" height="350">
+                    </figure>
+                </div>
+            </div>
+            <div id="romance" style="display:none;">
+                <div id="carousel">
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                </div>
+            </div>
+            <div id="drama" style="display:none;">
+                <div id="carousel">
+                    <figure>
+                        <img src="../../../assets/img/peli1.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli1.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/pelicula1.jpeg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli1.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/pelicula1.jpeg" width="330" height="350">
+                    </figure>
+                </div>
+            </div>
+            <div id="comedia" style="display:none;">
+                <div id="carousel">
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                </div>
+            </div>
+            <div id="anime" style="display:none;">
+                <div id="carousel">
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                    <figure>
+                        <img src="../../../assets/img/peli2.jpg" width="330" height="350">
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </div>
 </div>

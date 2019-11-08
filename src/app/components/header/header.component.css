@@ -1,0 +1,50 @@
+body {
+    background: #2B2E4A;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 10vh;
+    list-style: none;
+    background: #53354A;
+    position: sticky;
+}
+
+.menu a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    font-size: 20px
+}
+
+.boton {
+    background: rgba(128, 128, 128, 0.308);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+header img {
+    height: 50px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(21, 23, 36);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
