@@ -1,6 +1,12 @@
 body {
-    background: #2B2E4A;
+    background: #2b2e4a;
     font-family: 'Poppins', sans-serif;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 
 .menu {
@@ -9,7 +15,7 @@ body {
     align-items: center;
     max-width: 100%;
     margin: 0 auto;
-    height: 10vh;
+    height: 15vh;
     list-style: none;
     background: #53354A;
     position: sticky;
@@ -33,18 +39,4 @@ body {
 
 header img {
     height: 50px;
-}
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 10vh;
-    width: 100%;
-    background-color: rgb(21, 23, 36);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
 }
