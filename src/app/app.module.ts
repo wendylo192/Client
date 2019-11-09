@@ -10,6 +10,7 @@ import { ContenidoComponent } from './components/contenido/contenido.component';
 import { PagoPremiumRegistradoComponent } from './components/pago-premium-registrado/pago-premium-registrado.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { AdmincargaComponent } from './components/components/admincarga/admincarga.component';
+import { QuienesSomosComponent } from './components/quienes-somos/quienes-somos.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AdmincargaComponent } from './components/components/admincarga/admincar
     ContenidoComponent,
     PagoPremiumRegistradoComponent,
     RegistroComponent,
-    AdmincargaComponent
+    AdmincargaComponent,
+    QuienesSomosComponent
   ],
   imports: [
     BrowserModule
