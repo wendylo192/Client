@@ -10,6 +10,13 @@ import { ContenidoComponent } from './components/contenido/contenido.component';
 import { PagoPremiumRegistradoComponent } from './components/pago-premium-registrado/pago-premium-registrado.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { QuienesSomosComponent } from './components/quienes-somos/quienes-somos.component';
+import { AdmCargaContenidoComponent } from './components/adm-carga-contenido/adm-carga-contenido.component';
+import { AdmGeneroComponent } from './components/adm-genero/adm-genero.component';
+import { AdmEditarContenidoP1Component } from './components/adm-editar-contenido-p1/adm-editar-contenido-p1.component';
+import { AdmEditarContenidoP2Component } from './components/adm-editar-contenido-p2/adm-editar-contenido-p2.component';
+import { AdmEditarContenidoP3Component } from './components/adm-editar-contenido-p3/adm-editar-contenido-p3.component';
+import { ContMultimediaComponent } from './components/cont-multimedia/cont-multimedia.component';
+import { ContBitlikeListComponent } from './components/cont-bitlike-list/cont-bitlike-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +28,14 @@ import { QuienesSomosComponent } from './components/quienes-somos/quienes-somos.
     ContenidoComponent,
     PagoPremiumRegistradoComponent,
     RegistroComponent,
-    QuienesSomosComponent
+    QuienesSomosComponent,
+    AdmCargaContenidoComponent,
+    AdmGeneroComponent,
+    AdmEditarContenidoP1Component,
+    AdmEditarContenidoP2Component,
+    AdmEditarContenidoP3Component,
+    ContMultimediaComponent,
+    ContBitlikeListComponent
   ],
   imports: [
     BrowserModule
