@@ -9,6 +9,7 @@ import { PublicidadComponent } from './components/publicidad/publicidad.componen
 import { ContenidoComponent } from './components/contenido/contenido.component';
 import { PagoPremiumRegistradoComponent } from './components/pago-premium-registrado/pago-premium-registrado.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { AdmincargaComponent } from './components/components/admincarga/admincarga.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RegistroComponent } from './components/registro/registro.component';
     PublicidadComponent,
     ContenidoComponent,
     PagoPremiumRegistradoComponent,
-    RegistroComponent
+    RegistroComponent,
+    AdmincargaComponent
   ],
   imports: [
     BrowserModule
