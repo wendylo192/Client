@@ -1,12 +1,20 @@
-<app-header>
+<app-header (header)="setQuienesSomos($event)">
 </app-header>
 
 <!-- <app-pago-premium-registrado></app-pago-premium-registrado> -->
-<app-contenido></app-contenido>
-<app-publicidad></app-publicidad>
+<div *ngIf="!nosotros">
+    <app-contenido></app-contenido>
+    <app-publicidad></app-publicidad>
+</div>
+
+<div *ngIf="nosotros">
+    <app-quienes-somos></app-quienes-somos>
+</div>
 <!-- Se oculta la opción de carrusel de Leidy Lemus porque no se ha podido silenciar los videos apenas carga la página -->
-<app-carrusel></app-carrusel>
 
+<div *ngIf="!nosotros">
+    <app-carrusel></app-carrusel>
 
+</div>
 
 <app-footer></app-footer>

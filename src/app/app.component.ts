@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Client';
+  nosotros;
+
+  constructor() { }
+
+  setQuienesSomos(data) {
+    this.nosotros = data.nosotros;
+  }
 }
