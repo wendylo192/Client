@@ -17,6 +17,25 @@ import { AdmEditarContenidoP2Component } from './components/adm-editar-contenido
 import { AdmEditarContenidoP3Component } from './components/adm-editar-contenido-p3/adm-editar-contenido-p3.component';
 import { ContMultimediaComponent } from './components/cont-multimedia/cont-multimedia.component';
 import { ContBitlikeListComponent } from './components/cont-bitlike-list/cont-bitlike-list.component';
+import { Routes,RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+
+const routes: Routes = [{
+  path: 'home',
+  component: CarruselComponent
+},
+{
+  path: 'quienes-somos',
+  component: QuienesSomosComponent
+},
+{
+  path: 'contenido',
+  component: ContenidoComponent
+},
+{
+  path: 'pasar-premium',
+  component: PagoPremiumRegistradoComponent
+}]
 
 @NgModule({
   declarations: [
@@ -38,7 +57,8 @@ import { ContBitlikeListComponent } from './components/cont-bitlike-list/cont-bi
     ContBitlikeListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule  ,  
+    RouterModule.forRoot(routes), AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
