@@ -3,11 +3,11 @@
         <li>
             <a href="#!" id="logo"><img src="../../../assets/img/logoBITflex.png" alt="Logo"></a>
         </li>
-        <li><a href="#!">Home</a></li>
-        <li><a href="#!" (click)="quienesSomos()">Quiénes Somos?</a></li>
-        <li><a href="#!">Contenido</a></li>
+        <li><a routerLink='/home'>Home</a></li>
+        <li><a routerLink='/quienes-somos'>Quíenes Somos?</a></li>
+        <li><a routerLink='/contenido'>Contenido</a></li>
         <li><a href="#!" class="boton" id="p1" type="button" onclick="document.getElementById('p1').innerHTML = 'Usuario'">Iniciar Sesión</a></li>
-        <li><a href="#!" class="boton">Pásate a Premium</a></li>
+        <li><a routerLink='/pasar-premium'class="boton">Pásate a Premium</a></li>
     </ul>
 </header>
 <!-- esto fue el codigo que hicimos con deisy y esta unido al jv, pero el de iniciar sesión ya medio sirve -->
