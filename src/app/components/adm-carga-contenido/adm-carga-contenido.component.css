@@ -1,0 +1,16 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 25px;    
+}
+
+.container{
+display: grid;
+grid-template-columns: auto auto; /*Make the grid smaller than the container*/
+grid-gap: 10px;
+}
+
+.item1 {
+    grid-column: 1 /span 2;
+
+}
