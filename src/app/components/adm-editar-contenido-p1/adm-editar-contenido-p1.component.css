@@ -1,0 +1,45 @@
+.container{
+    display: grid;
+    grid-auto-flow: column;
+    color: #fff;
+    font-size: 25px;  
+}
+
+p{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box {
+    margin:20px auto 40px auto;	
+    border:1px solid #53354A;
+    height:30px;
+    overflow: hidden;
+    width: 450px;
+    position:relative;
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+ }
+
+select {
+    background :#fff;
+    border: none;
+    height: 30px;   
+    width: 450px;
+    color: #fff;
+    font-size: 25px;
+}
+ select:focus{ outline-color:  #903749}
+
+ .box::after{
+	content:"\025be";
+	display:table-cell;
+	text-align:center;
+	width:30px;
+	height:30px;
+	background-color:#53354A;
+	position:absolute;
+	top:0;
+	right:0px;	
+	pointer-events: none;
+}

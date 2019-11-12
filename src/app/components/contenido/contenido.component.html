@@ -1,118 +1,335 @@
-<div style="text-align:center !important">
-    <div class="nav-container">
-        <div class="nav">
-            <span style="font-size: 2vw;">¡Ya no te perderás los últimos estrenos de cine, en BITFlix tendrás el mejor contenido en cualquier momento!</span> <br>
-            <!-- <ul>
-                <li id="menu-todos"><a (click)="mostrar(1)">Todos</a></li>
-                <li id="menu-romance"><a (click)="mostrar(2)">Romance</a></li>
-                <li id="menu-drama"><a (click)="mostrar(3)">Drama</a></li>
-                <li id="menu-comedia"><a (click)="mostrar(4)">Comedia</a></li>
-                <li id="menu-anime"><a (click)="mostrar(5)">Anime</a></li>
-            </ul> -->
-        </div>
-        <div class="contenido">
-            <div *ngIf="mostrarTodos" class="container" id="carousel">
-                <figure>
-                    <img src="../../../assets/img/peli1.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli1.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/pelicula1.jpeg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli1.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/pelicula1.jpeg" width="330" height="350">
-                </figure>
-            </div>
-            <div *ngIf="mostrarRomance" class="container" id="carousel">
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-            </div>
-            <div *ngIf="mostrarDrama" class="container" id="carousel">
-                <figure>
-                    <img src="../../../assets/img/peli1.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli1.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/pelicula1.jpeg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli1.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/pelicula1.jpeg" width="330" height="350">
-                </figure>
-            </div>
-            <div *ngIf="mostrarComedia" class="container" id="carousel">
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-            </div>
-            <div *ngIf="mostrarAnime" class="container" id="carousel">
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-                <figure>
-                    <img src="../../../assets/img/peli2.jpg" width="330" height="350">
-                </figure>
-            </div>
-        </div>
+<div class="had-container">
+    <div class="row">
 
+        <div class="col s12 movie-view">
+            <div class="shadow"></div>
+        </div>
+        <div class="main-watchlist col s12 ps ps--theme_default ps--active-y" data-ps-id="13074795-4523-832c-ab70-893125cc346b">
+            <!-- <div class="watchlist-head">
+                <div class="col s3 watchlist-title">
+                    <p>Contenido</p>
+                </div>
+            </div> -->
+
+            <!-- <div class="nav-container">
+                <div class="nav">
+                    <ul>
+                        <li id="menu-todos"><a (click)="mostrar(1)">Todos</a></li>
+                        <li id="menu-romance"><a (click)="mostrar(2)">Romance</a></li>
+                        <li id="menu-drama"><a (click)="mostrar(3)">Drama</a></li>
+                        <li id="menu-comedia"><a (click)="mostrar(4)">Comedia</a></li>
+                        <li id="menu-anime"><a (click)="mostrar(5)">Anime</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="nav-container">
+                <div class="nav">
+                    <ul>
+                        <li id="menu-todos"><a (click)="mostrar(1)">Todos</a></li>
+                        <li id="menu-romance"><a (click)="mostrar(2)">Romance</a></li>
+                        <li id="menu-drama"><a (click)="mostrar(3)">Drama</a></li>
+                        <li id="menu-comedia"><a (click)="mostrar(4)">Comedia</a></li>
+                        <li id="menu-anime"><a (click)="mostrar(5)">Anime</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main" class="watchlist-list">
+                <div class="col s12 load" style="display: none;">
+                    <div class="col s4 offset-s4 spinner">
+                    </div>
+                </div>
+
+                <div id="watchlist" class="col s12 watchlist">
+                    <div class="lista">
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="568012">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/4E2lyUGLEr3yH4q6kJxPkQUhX7n.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">One Piece: Stampede</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 75 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="420817">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/3iYQTLGoy7QnjcUYRJy4YrAgGvp.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">Aladdin</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 3992 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="453405">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/uTALxjQU8e1lhmNjP9nnJ3t2pRU.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">Gemini Man</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 489 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="475557">
+                            <div class="datas">
+                                <img class="center responsive-img" src="http://spidermovies.net/img/peliculas/1456/misterio%20abordo.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">Misterio a Bordo</div>
+                                    <div class="like">
+                                        <!-- <i class="material-icons"></i> -->
+                                        <img src="assets\img\thumb_up.png" alt="" width="3vw"> 4936 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <!-- <i class="material-icons">play_arrow</i> -->
+                                    <img src="assets\img\play.png" alt="" width="3vw">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="420809">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/tBuabjEqxzoUBHfbyNbd8ulgy5j.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">Maleficent: Mistress of Evil</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 725 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="384018">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/kvpNZAQow5es1tSY6XW2jAZuPPG.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">Fast &amp; Furious Presents: Hobbs &amp; Shaw</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 1773 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="420818">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/2bXbqYdUdNVa8VIWXVfclP2ICtT.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">The Lion King</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 3407 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="920">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/jpfkzbIXgKZqCZAkEkFH2VYF63s.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">Cars</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 8319 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="501170">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/p69QzIBbN06aTYqRRiCOY1emNBh.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">Doctor Sleep</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 183 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="320288">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/cCTJPelKGLhALq3r51A9uMonxKj.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">Dark Phoenix</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 2363 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="299536">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">Avengers: Infinity War</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 15694 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="504949">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/8u0QBGUbZcBW59VEAdmeFl9g98N.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">The King</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 300 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="429617">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/lcq8dVxeeOqHvvgcte707K0KVx5.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">Spider-Man: Far from Home</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 4870 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="480105">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/g4z7mDmJmx23vsVg6XNWcnXb6gc.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">47 Meters Down: Uncaged</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 170 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="521777">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/tximyCXMEnWIIyOy9STkOduUprG.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">Good Boys</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 331 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="559969">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/ePXuKdXZuJx8hHMNr2yM4jY2L7Z.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">El Camino: A Breaking Bad Movie</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 1319 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="338967">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/pIcV8XXIIvJCbtPoxF9qHMKdRr2.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">Zombieland: Double Tap</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 297 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s10 push-s1 m6 l3 movie" data-id="474350">
+                            <div class="datas">
+                                <img class="center responsive-img" src="https://image.tmdb.org/t/p/w500/zfE0R94v1E8cuKAerbskfD3VfUt.jpg" alt="" width="200vw">
+                                <div class="data-info">
+                                    <div class="category">PELÍCULA</div>
+                                    <div class="movie-title">It Chapter Two</div>
+                                    <div class="like">
+                                        <i class="material-icons">thumb_up</i> 1876 Likes
+                                    </div>
+                                </div>
+                                <div class="play circle scale-transition">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                <div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+            </div>
+            <div class="ps__scrollbar-y-rail" style="top: 0px; height: 248px; right: 0px;">
+                <div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 193px;"></div>
+            </div>
+        </div>
 
 
     </div>

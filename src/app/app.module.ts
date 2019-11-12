@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -9,6 +10,7 @@ import { PublicidadComponent } from './components/publicidad/publicidad.componen
 import { ContenidoComponent } from './components/contenido/contenido.component';
 import { PagoPremiumRegistradoComponent } from './components/pago-premium-registrado/pago-premium-registrado.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { AdmincargaComponent } from './components/components/admincarga/admincarga.component';
 import { QuienesSomosComponent } from './components/quienes-somos/quienes-somos.component';
 import { AdmCargaContenidoComponent } from './components/adm-carga-contenido/adm-carga-contenido.component';
 import { AdmGeneroComponent } from './components/adm-genero/adm-genero.component';
@@ -47,6 +49,7 @@ const routes: Routes = [{
     ContenidoComponent,
     PagoPremiumRegistradoComponent,
     RegistroComponent,
+    AdmincargaComponent,
     QuienesSomosComponent,
     AdmCargaContenidoComponent,
     AdmGeneroComponent,
@@ -57,8 +60,10 @@ const routes: Routes = [{
     ContBitlikeListComponent
   ],
   imports: [
-    BrowserModule  ,  
-    RouterModule.forRoot(routes), AppRoutingModule
+    BrowserModule,  
+    RouterModule.forRoot(routes), 
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

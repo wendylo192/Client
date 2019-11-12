@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.multimedia {
+    display: grid;
+    grid-template-areas: "title title title favorite" "play play play play" "descr descr descr imagen";
+    grid-template-rows: 70px 560px;
+}
+
+.play {
+    grid-area: play;
+    text-align: center;
+}
+
+.title {
+    grid-area: title;
+    align-self: end;
+    text-align: left;
+    height: 100%;
+}
+
+.favorite {
+    grid-area: favorite;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.descr {
+    grid-area: descr;
+    align-self: start;
+    text-align: justify;
+}
+
+.imagen-peli {
+    grid-area: imagen;
+    align-self: stretch;
+    text-align: center;
+}
