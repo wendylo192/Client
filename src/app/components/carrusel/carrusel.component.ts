@@ -1,18 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
+import {NgbCarouselConfig, NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-carrusel',
   templateUrl: './carrusel.component.html',
-  styleUrls: ['./carrusel.component.css']
+  styleUrls: ['./carrusel.component.css'],
+  providers: [NgbCarouselConfig] 
 })
-export class CarruselComponent implements OnInit {
 
-  
-  constructor() { }
+@NgModule({
+  imports:[NgbCarouselModule],
+})
 
-  ngOnInit() {
+export class CarruselComponent {
+
+  constructor(config: NgbCarouselConfig) {
+    config.interval = 10000;
+    config.wrap = true;
+    config.keyboard = false;
+    config.pauseOnHover = true;
   }
- 
-
 }
-

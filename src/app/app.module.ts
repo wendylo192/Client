@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -57,8 +58,10 @@ const routes: Routes = [{
     ContBitlikeListComponent
   ],
   imports: [
-    BrowserModule  ,  
-    RouterModule.forRoot(routes), AppRoutingModule
+    BrowserModule,  
+    RouterModule.forRoot(routes), 
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
