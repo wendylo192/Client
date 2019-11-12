@@ -49,10 +49,7 @@ const routes: Routes = [{
     ContenidoComponent,
     PagoPremiumRegistradoComponent,
     RegistroComponent,
-<<<<<<< HEAD
     AdmincargaComponent,
-    QuienesSomosComponent
-=======
     QuienesSomosComponent,
     AdmCargaContenidoComponent,
     AdmGeneroComponent,
@@ -61,7 +58,6 @@ const routes: Routes = [{
     AdmEditarContenidoP3Component,
     ContMultimediaComponent,
     ContBitlikeListComponent
->>>>>>> 9cceff84e39f5056c0aa982846b09a4f3e1de59b
   ],
   imports: [
     BrowserModule,  
