@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+ }.boton {
+    background: rgba(128, 128, 128, 0.308);
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 15vh;
+    text-align: center;
+ }.botones {
+    display: flex;
+    justify-content: space-around;
+ }form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+ }h2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+ }form div+div {
+    margin-top: 1em;
+ }label {
+    text-align: right;
+    margin: 4px;
+ }

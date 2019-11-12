@@ -69,42 +69,17 @@ window.onload = function () {
 
 
     /* CARRUSEL SALLY */
-    function mostrar(valor) {
-        if (valor == 1) {
-            document.getElementById('todos').style.display = 'block';
-            document.getElementById('romance').style.display = 'none';
-            document.getElementById('drama').style.display = 'none';
-            document.getElementById('comedia').style.display = 'none';
-            document.getElementById('anime').style.display = 'none';
+    $('#carousel').on('slid.bs.carousel', function (e) {
+        let elemento = $('#carousel .item.active video').first();
+        if (elemento.prop("tagName") == "VIDEO") {
+          elemento.get(0).play();
         }
-        else if (valor == 2) {
-            document.getElementById('romance').style.display = 'block';
-            document.getElementById('todos').style.display = 'none';
-            document.getElementById('drama').style.display = 'none';
-            document.getElementById('comedia').style.display = 'none';
-            document.getElementById('anime').style.display = 'none';
+     });
+     
+     $('#carousel').bind('slide.bs.carousel', function (e) {  
+        let elemento = $('#carousel .item.active video').first();
+        if (elemento.prop("tagName") == "VIDEO") {
+          elemento.get(0).pause();
         }
-        else if (valor == 3) {
-            document.getElementById('drama').style.display = 'block';
-            document.getElementById('todos').style.display = 'none';
-            document.getElementById('romance').style.display = 'none';
-            document.getElementById('comedia').style.display = 'none';
-            document.getElementById('anime').style.display = 'none';
-        }
-        else if (valor == 4) {
-            document.getElementById('comedia').style.display = 'block';
-            document.getElementById('todos').style.display = 'none';
-            document.getElementById('romance').style.display = 'none';
-            document.getElementById('drama').style.display = 'none';
-            document.getElementById('anime').style.display = 'none';
-        }
-        else if (valor == 5) {
-            document.getElementById('anime').style.display = 'block';
-            document.getElementById('todos').style.display = 'none';
-            document.getElementById('romance').style.display = 'none';
-            document.getElementById('drama').style.display = 'none';
-            document.getElementById('comedia').style.display = 'none';
-        }
-    }
-
+     });
 }
