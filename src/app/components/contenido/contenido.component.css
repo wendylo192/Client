@@ -449,7 +449,7 @@ input[type=text]:not(.browser-default) {
 
 .main-watchlist {
     background: #a9a9b5;
-    height: calc(70vh - 50px);
+    height: calc(80vh - 50px);
     overflow: auto;
     position: relative;
     padding: 2rem !important;
