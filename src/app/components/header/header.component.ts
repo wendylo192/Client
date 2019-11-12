@@ -7,17 +7,16 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() header: EventEmitter<any> = new EventEmitter();
 
+  logueado;
+  premium;
   constructor() { }
 
   ngOnInit() {
+    this.logueado = false;
+    this.premium = false;
+    console.log("entro oninit")
   }
 
-
-  quienesSomos() {
-    this.header.emit({nosotros: true});
-    console.log("entro clic")
-  }
 
 }

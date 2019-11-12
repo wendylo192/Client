@@ -1,17 +1,16 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent{
   title = 'Client';
-  nosotros;
+  logueado = false;
 
-  constructor() { }
-
-  setQuienesSomos(data) {
-    this.nosotros = data.nosotros;
+  setLogueado(data){
+    this.logueado = data.logueado;
   }
+
 }
