@@ -1,0 +1,22 @@
+#admmovie{
+   border: rgb(243, 236, 236) 0.5px;
+   border: solid;
+   border-radius: 2px;
+   width: 40%;
+   height: 70vh;
+   position: absolute;
+   left: 30%;
+   background: cornsilk;
+}
+.admmovie{
+    margin-top: 10px;
+    margin-inline-start: 20px;
+    padding: 20px;
+}
+
+input{
+    margin-inline-start: 20px;
+}
+select{
+    margin-inline-start: 20px;
+}
