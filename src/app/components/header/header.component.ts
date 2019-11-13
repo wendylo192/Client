@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.logueado = false;
+    this.logueado = true;
     this.premium = false;
     console.log("entro oninit")
   }
@@ -21,6 +21,8 @@ export class HeaderComponent implements OnInit {
   premiumClick(){
     if(this.logueado == true){
       document.getElementById('pasate').style['display'] = 'block';
+    } else {
+      window.location.href = 'http://localhost:3002/users/signin';
     }
   }
 
