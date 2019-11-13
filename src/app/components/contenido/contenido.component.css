@@ -2,6 +2,8 @@ body {
     color: #fff;
     font-family: 'Encode Sans', sans-serif;
     background: #a9a9b5;
+    position: relative;
+    top: 55px;
 }
 
 h3,
@@ -433,7 +435,7 @@ input[type=text]:not(.browser-default) {
 }
 
 .had-container .row {
-    margin-bottom: 0;
+    margin-bottom: 10px;
     position: relative;
 }
 
@@ -449,7 +451,7 @@ input[type=text]:not(.browser-default) {
 
 .main-watchlist {
     background: #a9a9b5;
-    height: calc(80vh - 50px);
+    height: 90vh;
     overflow: auto;
     position: relative;
     padding: 2rem !important;

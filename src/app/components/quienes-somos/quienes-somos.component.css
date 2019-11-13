@@ -1,5 +1,6 @@
-body{   
-    color:white;
-    font-size: 50px;   
-  }
-
+body {
+    color: white;
+    font-size: 50px;
+    position: relative;
+    top: 55px;
+}
