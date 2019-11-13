@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.logueado = false;
+    this.logueado = true;
     this.premium = false;
     console.log("entro oninit")
   }

@@ -3,8 +3,7 @@
    width: 100vw;
    height: 100vh;
    background: rgba(0, 0, 0, .6);
-   z-index: 9999;
-   top: 0;
+   top: 100px;
 }
 
 .contenedor-pago {
