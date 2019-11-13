@@ -18,5 +18,10 @@ export class HeaderComponent implements OnInit {
     console.log("entro oninit")
   }
 
+  premiumClick(){
+    if(this.logueado == true){
+      document.getElementById('pasate').style['display'] = 'block';
+    }
+  }
 
 }

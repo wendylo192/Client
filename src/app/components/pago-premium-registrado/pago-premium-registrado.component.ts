@@ -12,4 +12,8 @@ export class PagoPremiumRegistradoComponent implements OnInit {
   ngOnInit() {
   }
 
+  btnClick(){
+    document.getElementById('pasate').style['display'] = 'none';
+  }
+
 }
