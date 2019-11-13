@@ -437,6 +437,7 @@ input[type=text]:not(.browser-default) {
 .had-container .row {
     margin-bottom: 10px;
     position: relative;
+    top: 50px;
 }
 
 .watchlist-head {
