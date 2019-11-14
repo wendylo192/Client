@@ -21,11 +21,13 @@ import { ContMultimediaComponent } from './components/cont-multimedia/cont-multi
 import { ContBitlikeListComponent } from './components/cont-bitlike-list/cont-bitlike-list.component';
 import { Routes,RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [{
-  path: 'home',
-  component: CarruselComponent
+  path: '',
+  component: HomeComponent
 },
+
 {
   path: 'quienes-somos',
   component: QuienesSomosComponent
@@ -57,7 +59,8 @@ const routes: Routes = [{
     AdmEditarContenidoP2Component,
     AdmEditarContenidoP3Component,
     ContMultimediaComponent,
-    ContBitlikeListComponent
+    ContBitlikeListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,  
