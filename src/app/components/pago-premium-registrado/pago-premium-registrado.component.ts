@@ -13,7 +13,8 @@ export class PagoPremiumRegistradoComponent implements OnInit {
   }
 
   btnClick(){
-    document.getElementById('pasate').style['display'] = 'none';
+    /* document.getElementById('pasate').style['display'] = 'none'; */
+    window.location.href = 'http://localhost:4200';
   }
 
 }
