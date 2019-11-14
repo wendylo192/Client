@@ -1,35 +1,35 @@
-.container{
-    display: grid;
-    grid-auto-flow: column;
+*{
+    font-family: 'Poppins', sans-serif;
     color: #fff;
-    font-size: 25px;  
+    font-size: 15px;  
 }
 
 p{
     text-align: center;
-    font-family: 'Poppins', sans-serif;
+    font-size: 20px; 
+    padding-top:100px;    
 }
-
-.box {
-    margin:20px auto 40px auto;	
-    border:1px solid #53354A;
-    height:30px;
-    overflow: hidden;
-    width: 450px;
-    position:relative;
-    text-align: right;
-    font-family: 'Poppins', sans-serif;
- }
 
 select {
     background :#fff;
     border: none;
     height: 30px;   
-    width: 450px;
+    width: 350px;
     color: #fff;
     font-size: 25px;
 }
  select:focus{ outline-color:  #903749}
+
+.box {
+    margin:10px auto 10px auto;	
+    border:1px solid #53354A;
+    height:30px;
+    overflow: hidden;
+    width: 350px;
+    position:relative;
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+ }
 
  .box::after{
 	content:"\025be";
@@ -43,3 +43,11 @@ select {
 	right:0px;	
 	pointer-events: none;
 }
+
+.container{
+    display: grid;
+    grid-template-columns: 45vw auto; /*Make the grid smaller than the container*/
+   
+}
+
+

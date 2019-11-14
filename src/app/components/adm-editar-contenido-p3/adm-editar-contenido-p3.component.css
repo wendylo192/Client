@@ -1,22 +1,64 @@
-#admmovie{
-   border: rgb(243, 236, 236) 0.5px;
-   border: solid;
-   border-radius: 2px;
-   width: 40%;
-   height: 70vh;
-   position: absolute;
-   left: 30%;
-   background: cornsilk;
+*{
+    font-family: 'Poppins', sans-serif; 
+    font-size: 15px;
 }
-.admmovie{
-    margin-top: 10px;
-    margin-inline-start: 20px;
-    padding: 20px;
+.movie{
+    display: flex;
+    margin-top: 50px;
+    margin-inline-end:30px ;
+    margin-inline-start: 30px;
+    padding: 30px;  
+    justify-content: left;
+
 }
 
-input{
-    margin-inline-start: 20px;
+form{
+    max-width: 350vw;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 5px;
 }
+
+form div+div {
+    margin-top: 1em;
+  }
+
+input{
+    margin-inline-start: 5px;
+    border: 3px solid #53354A;
+}
+
+input[type=text],textarea {
+    border: 3px solid #53354A;
+} 
+
 select{
-    margin-inline-start: 20px;
+    margin-inline-start: 10px;
+    border: 3px solid #53354A;
+}
+
+input[type=submit] {
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 30vh;
+    background-color: #53354A;
+    border: none;
+    color: white;
+    /* padding: 12px 10px; */
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    border: 3px solid #53354A;
+    background-color: #903749;  
+  }
+
+  input[type=years] {
+    border: 3px solid #53354A; 
+  }
+
+#title{
+    width: 98%;  
 }
