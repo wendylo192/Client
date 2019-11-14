@@ -1,21 +1,18 @@
 <div class="tex-center" id="pasate">
-    <h1 id="titulo1">PÁSATE A PREMIUM </h1>
-    <h1 id="titulo2">Paga $35.000 por uso de 4 pantallas</h1>
-    <div class="pagos col-md-12" id="pagos">
-        <div class="col-md-12">
-            <input id="tarjCredR" type="radio" name="metPago" value="tarjCred">
-            <img id="tarjcredito" class="metPagoLargo" src="../../../assets/img/tarjetas_cred.png" alt="">
-            <input type="radio" name="metPago" value="pse">
-            <img class="metPago" src="../../../assets/img/pse.png" alt="">
+    <div class="contenedor-pago">
+        <h2 id="titulo1">Pásate a premium </h2>
+        <h4 id="titulo2">Paga $35.000 por uso de 4 pantallas</h4>
+
+        <p>Elige el medio de pago</p>
+        <div class="pagos">
+            <img id="tarjcredito" src="../../../assets/img/tarjetas_cred.png" alt="">
+            <img id="pse" src="../../../assets/img/pse.png" alt="">
+            <img id="efecty" src="../../../assets/img/efecty.png" alt="">
+            <img id="baloto" src="../../../assets/img/baloto.png" alt="">
         </div>
-        <div class="col-md-12">
-            <input id="efectyR" type="radio" name="metPago" value="efecty">
-            <img id="efecty" class="metPagoLargo" src="../../../assets/img/efecty.png" alt="">
-            <input id="balotoR" type="radio" name="metPago" value="baloto">
-            <img id="baloto" class="metPagoLargo" src="../../../assets/img/baloto.png" alt="">
-        </div>
-        <div>
-            <button type="submit" id="pay">PAGO</button>
+        <div class="contenedor-botones-pago">
+            <button type="submit" class="boton-segundo" id="despues" (click)="btnClick()">Lo haré después</button>
+            <button type="submit" class="boton-primero" id="pay" (click)="btn2Click()">Disfrutar de premium</button>
         </div>
     </div>
 </div>

@@ -1,16 +1,5 @@
-<app-header>
-</app-header>
-<router-outlet></router-outlet>
-<!-- <app-pago-premium-registrado></app-pago-premium-registrado> -->
-<!-- <app-carrusel></app-carrusel>
-<app-contenido></app-contenido>
-<app-publicidad></app-publicidad>
- -->
-<!-- <app-carrusel></app-carrusel>
-<app-admincarga></app-admincarga> -->
-
-<!--  --><app-cont-multimedia></app-cont-multimedia>
-
-<!-- Se oculta la opción de carrusel de Leidy Lemus porque no se ha podido silenciar los videos apenas carga la página -->
-<app-footer></app-footer>
-<app-adm-editar-contenido-p3></app-adm-editar-contenido-p3>
+<div [ngStyle]="{'min-height': clientHeight-footerHeight + 'px'}">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+</div>
+<app-footer #footer></app-footer>

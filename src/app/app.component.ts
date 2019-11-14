@@ -1,16 +1,25 @@
-import { Component} from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent{
+export class AppComponent implements AfterViewInit {
   title = 'Client';
   logueado = false;
 
-  setLogueado(data){
-    this.logueado = data.logueado;
+  clientHeight: number;
+  footerHeight: number;
+  @ViewChild('footer', {static: false}) footerDiv: ElementRef;
+
+  constructor() {
+    this.clientHeight = window.innerHeight;
   }
+  ngAfterViewInit() {
+    console.log('entro afterview' + this.footerDiv);
+    this.footerHeight = this.footerDiv.nativeElement.offsetHeight;
+  }
+
 
 }
