@@ -8,12 +8,11 @@
         <li><a routerLink='/contenido'>Contenido</a></li>
         <li id="infousuario">
             <a href="http://localhost:3002/users/signin" *ngIf="!logueado">Iniciar Sesión</a>
-            <i *ngIf="premium" class="fa fa-star amarillo"></i><p class="texto-blanco" *ngIf="logueado">Nombre usuario </p>
+            <i *ngIf="premium" class="fa fa-star amarillo"></i>
+            <p class="texto-blanco" *ngIf="logueado">Nombre usuario </p>
         </li>
-        <li><a routerLink='/pasar-premium' class="boton" *ngIf="!premium" (click)="premiumClick()">Pásate a Premium</a>            
+        <li><a routerLink='/pasar-premium' class="boton" *ngIf="!premium" (click)="premiumClick()">Pásate a Premium</a>
             <a href="http://localhost:3002/users/signin"><i *ngIf="logueado" class="fa fa-sign-out-alt fa-2x"></i> </a>
         </li>
     </ul>
 </header>
-<!-- esto fue el codigo que hicimos con deisy y esta unido al jv, pero el de iniciar sesión ya medio sirve -->
-<button type="button" onclick="document.getElementById('p1').innerHTML = 'Jorge'"></button>

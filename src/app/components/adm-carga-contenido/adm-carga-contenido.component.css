@@ -1,16 +1,71 @@
-*{
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    font-size: 25px;    
-}
+ * {
+    color: white;
+    font-family: 'Poppins', sans-serif;   
+  }
 
-.container{
-display: grid;
-grid-template-columns: auto auto; /*Make the grid smaller than the container*/
-grid-gap: 10px;
-}
+  .container{
+      display: grid;
+      grid-template-columns: auto auto;
+  }
 
-.item1 {
-    grid-column: 1 /span 2;
+  .botones {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  form {
+    margin: 0 auto;
+    width: 350px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    margin-block-start: 2% ;
+  }
+  
+  h2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+ 
+ form div+div {
+    margin-top: 1em;
+  }
+ 
+  label {
+    text-align: right;
+    margin: 15px;
+    padding: 1px;
+  }
 
-}
+  input{
+    border: 3px solid #53354A;    
+  }
+
+  textarea{
+    border: 3px solid #53354A;
+  }
+
+  input[type=text] {
+    max-width: 15vw;
+    
+  }
+  input[type=number] {
+    max-width: 10vw;
+  }
+
+  input[type=submit] {
+    background: #53354A;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 25vw;
+    text-align: center;
+  }
+
+  input[type=submit]:hover {
+    background-color: #903749;  
+  }
+
+  input[type=years] {
+    border: 3px solid #53354A; 
+  }
