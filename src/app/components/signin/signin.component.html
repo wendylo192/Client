@@ -1,26 +1,31 @@
 <div class="row">
-        <div class="col-md-4 mx-auto  ">
-            <div class="card inicio mt-4 text-center">
-                <div class="card-header">
-                    <h1 style="color:white;">Inicio de sesión</h1>
-                </div>
-        <img src="/media/icon-logo.png" class=" mx-auto d-block m-4 " alt="Logo" style="width: 10vw; background-color: #523549; border-radius: 8px; ">
-                <div class="card-body">
-                    <form action="" method="POST">
-                        <div class="form-group">
-                            <input type="email" class="form-control" name="email" placeholder="Email" autofocus>
+    <div class="col-md-4 mx-auto  ">
+        <div class="card inicio mt-4 text-center">
+            <div class="card-header">
+                <h1 style="color:white;">Inicio de sesión</h1>
+            </div>
+            <img src="/media/icon-logo.png" class=" mx-auto d-block m-4 " alt="Logo"
+                style="width: 10vw; background-color: #523549; border-radius: 8px; ">
+            <div class="card-body">
+                <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <input type="email" class="form-control" #email="ngModel" name="email" [(ngModel)]="user.email"
+                            placeholder="Email" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" #password="ngModel" name="password" [(ngModel)]="user.password"
+                            class="form-control" placeholder="Contraseña">
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6 flotarLeft"><a href="http://localhost:3002/users/signup"> Registrarse</a>
                         </div>
-                        <div class="form-group"> 
-                            <input type="password" name="password" class="form-control" placeholder="Contraseña">
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-6 flotarLeft"><a href="http://localhost:3002/users/signup"> Registrarse</a></div>
-                            <div class="col-md-6 flotarLeft"><a href="http://localhost:4200"> Iniciar Sesión</a></div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </form>
-                </div>
+                        <div class="col-md-6 flotarLeft"><a href="http://localhost:4200"> Iniciar Sesión</a></div>
+                        <input id="btnIngresar" type="submit" value="Ingresar">
+                        <div class="clearfix"></div>
+                    </div>
+                </form>
             </div>
         </div>
-        
     </div>
+
+</div>

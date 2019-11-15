@@ -26,6 +26,8 @@ import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuar
 import { PerfilAdminComponent } from './components/perfil-admin/perfil-admin.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [{
   path: '',
@@ -89,7 +91,10 @@ const routes: Routes = [{
     BrowserModule,  
     RouterModule.forRoot(routes), 
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
