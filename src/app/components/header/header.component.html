@@ -11,7 +11,7 @@
             <i *ngIf="premium" class="fa fa-star amarillo"></i>
             <p class="texto-blanco" *ngIf="logueado">Nombre usuario </p>
         </li>
-        <li><a routerLink='/pasar-premium' class="boton" *ngIf="!premium" (click)="premiumClick()">Pásate a Premium</a>
+        <li><a routerLink='/signup' class="boton" *ngIf="!premium" (click)="premiumClick()">Pásate a Premium</a>
             <a href="http://localhost:3002/users/signin"><i *ngIf="logueado" class="fa fa-sign-out-alt fa-2x"></i> </a>
         </li>
     </ul>
