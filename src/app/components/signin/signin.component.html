@@ -1,22 +1,26 @@
 <div class="sig">
     <div class="row">
         <div class="col-md-4 mx-auto border border-white rounded">
-            <h1 class="d-flex justify-content-center mt-2 text-white">Inicio de sesión</h1>
+            <h1 style="color:white" class="d-flex justify-content-center mt-2">Inicio de sesión</h1>
             <div class="card-body">
-                <form action="" method="POST">
+                <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
                     <div class="form-group">
                         <br>
-                        <input type="email" class="form-control" name="email" placeholder="Email" autofocus>
+                        <input type="email" class="form-control" #email="ngModel" name="email" [(ngModel)]="user.email" placeholder="Email" autofocus>
                     </div>
                     <br>
                     <div class="form-group">
-                        <input type="password" name="password" class="form-control" placeholder="Contraseña">
+                        <input type="password" #password="ngModel" name="password" [(ngModel)]="user.password" class="form-control" placeholder="Contraseña">
                     </div>
                     <br>
                     <div class="d-flex justify-content-around">
                         <a href="http://localhost:3002/users/signup"> Registrarse</a>
-                        <a href="http://localhost:4200"> Iniciar Sesión</a>
+                        <!-- <a href="http://localhost:4200"> Iniciar Sesión</a> -->
                     </div>
+                    <div class="col-md-6 flotarLeft"><a href="http://localhost:4200"> Iniciar Sesión</a></div>
+                    <input id="btnIngresar" type="submit" value="Ingresar">
+                    <div class="clearfix"></div>
+
                 </form>
             </div>
         </div>
