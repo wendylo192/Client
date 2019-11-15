@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.logueado = true;
+    this.logueado = false;
     this.premium = false;
     console.log("entro oninit")
   }
