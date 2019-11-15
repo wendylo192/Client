@@ -7,7 +7,7 @@
         <li><a routerLink='/quienes-somos'>Quiénes Somos?</a></li>
         <li><a routerLink='/contenido'>Contenido</a></li>
         <li id="infousuario">
-            <a href="/signin" *ngIf="!logueado">Iniciar Sesión</a>
+                <a routerLink="/signin" *ngIf="!logueado">Iniciar Sesión</a>
             <i *ngIf="premium" class="fa fa-star amarillo"></i>
             <p class="texto-blanco" *ngIf="logueado">Nombre usuario </p>
         </li>

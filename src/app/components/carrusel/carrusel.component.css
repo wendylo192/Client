@@ -1,4 +1,11 @@
 * {
     position: relative;
-    margin: 24px 0px 1px 0px;
-}
+    margin: 24px 0px 0px 0px;
+    color: white;
+ }
+ h5 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+ }
+ 
