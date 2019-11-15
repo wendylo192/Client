@@ -1,0 +1,14 @@
+.signup-container{
+    padding:10%;
+}
+
+input[type=submit] {
+    background: #53354A;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 25vw;
+ }
+
+  input{
+    border: 3px solid #53354A;    
+  }

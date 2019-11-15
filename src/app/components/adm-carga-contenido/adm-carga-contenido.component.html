@@ -1,5 +1,39 @@
-<div class="container">
-    <div class="item1"><app-adm-editar-contenido-p1></app-adm-editar-contenido-p1></div>
-    <div class="item2"><app-adm-editar-contenido-p2></app-adm-editar-contenido-p2></div>
-    <div class="item3"><app-adm-editar-contenido-p3></app-adm-editar-contenido-p3></div>
+<div class="container">    
+<form action="/my-handling-form-page" method="post">
+    <div>
+        <h2>Cargar Contenido</h2> <br>
+        <label for="name">Titulo:</label>
+        <input type="text" id="name" />
+        <label for="name">Género:</label>
+        <input type="text" id="name" />
+        <label for="name">Año:</label>
+        <input type="years" size="4" id="name" />
     </div>
+    <div>
+        <label for="mail">Descripción:</label>
+        <textarea id="msg"></textarea>
+    </div>
+    <div class="botones">
+            <input type="submit" value="Cargar" id="load">
+    </div>    
+  </form>
+
+  <form action="/my-handling-form-page" method="post">
+    <div>
+        <h2>Crear Género</h2> <br>
+        <label for="name">Género:</label>
+        <input type="text" id="name" />
+    </div>
+    <div>
+        <label for="mail">Descripción:</label>
+        <textarea id="msg"></textarea>
+    </div>
+    <div class="botones">
+            <input type="submit" value="Crear" id="create">
+        
+            <input type="submit" value="Modificar" id="edit">
+        
+            <input type="submit" value="Borrar" id="delete">
+    </div>
+  </form>
+</div> 

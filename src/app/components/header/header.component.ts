@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-header',
@@ -10,10 +11,12 @@ export class HeaderComponent implements OnInit {
 
   logueado;
   premium;
+  public user: User;
+
   constructor() { }
 
   ngOnInit() {
-    this.logueado = true;
+    this.logueado = false;
     this.premium = false;
     console.log("entro oninit")
   }
