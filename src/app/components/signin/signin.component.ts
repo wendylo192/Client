@@ -10,7 +10,7 @@ import { AppComponent } from '../../app.component';
 })
 export class SigninComponent implements OnInit {
   public user: User;
-  @Output() logueado: EventEmitter<any> = new EventEmitter();
+  @Output() login: EventEmitter<any> = new EventEmitter();
 
   ngOnInit() {
   }
@@ -22,7 +22,7 @@ export class SigninComponent implements OnInit {
   public onSubmit() {
     this.userService.getUser(this.user, false).subscribe(data => {
       this.userService.getUser(this.user, true).subscribe(items => {
-        this.logueado.emit({ identity: true, user: data["user"], token: items["token"] });
+        this.login.emit({ logueado: true, user: data["user"], token: items["token"] });
         console.log("RESPUESTA", data);
       });
     });

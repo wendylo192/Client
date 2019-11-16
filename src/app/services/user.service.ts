@@ -2,6 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'; 
 import { User } from '../models/user';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/x-www-form-urlencoded'
+    })
+};
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,13 +18,15 @@ export class UserService {
   constructor ( private http: HttpClient ) { }
 
   getUser ( user: User, hash: boolean ) {
-    const body = {email: user.email,
+    console.log(this.REST_GET_USER);
+    const body = JSON.stringify({email: user.email,
       password: user.password,
-      gethash: hash};
-    let header: HttpHeaders;
-    header = new HttpHeaders();
-    header.set("Content-Type","application/x-www-form-urlencoded");
-    header.set("Access-Control-Allow-Origin", "*");
-    return this.http.post(this.REST_GET_USER, body, {headers: header});
+      gethash: hash});
+    
+    return this.http.post(this.REST_GET_USER, body, httpOptions);
+
+    /* return this.http.post(this.REST_GET_USER, body.toString(), {
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    }) */
   }
 }
