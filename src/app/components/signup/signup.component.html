@@ -16,10 +16,12 @@
                 <div class="form-group">
                     <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Contraseña" value="{{confirm_password}}">
                 </div>
-                <div class="form-group text-white d-flex justify-content-center">
-                    <input type="checkbox" id="role" name="role" value="PREMIUM" onchange="showContent()"> <span> Quiero ser Premium</span>
-                </div>
 
+                <div class="form-group text-white d-flex justify-content-center">
+                    <input type="checkbox" id="role" name="role" value="PREMIUM" onchange="showContent()"> &nbsp;
+                    <h6> Quiero ser Premium</h6>
+                </div>
+                <!-- Informaciòn sobre metodos de pago -->
                 <div class="pagos col-md-12" style="display: none;" id="pagos">
                     <div class="col-md-12">
                         <input type="radio" name="metPago" value="tarjCred"><img class="metPagoLargo" src="../../../assets/img/tarjetas_cred.png" alt="">
@@ -30,9 +32,9 @@
                         <input type="radio" name="metPago" value="baloto"><img class="metPagoLargo" src="../../../assets/img/baloto.png" alt="">
                     </div>
                 </div>
-                <div class="d-flex justify-item-center">
-                    <button type="submit" class="boton-primero">
-                    Registrate</button></div>
+                <!-- boton -->
+                <div class="d-flex justify-content-around">
+                    <a href="http://localhost:3002/users/signup"> Regístrate</a></div>
             </form>
         </div>
     </div>
