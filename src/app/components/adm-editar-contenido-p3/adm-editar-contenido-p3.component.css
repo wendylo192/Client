@@ -4,16 +4,18 @@
 }
 .movie{
     display: flex;
-    margin-top: 50px;
     margin-inline-end:30px ;
     margin-inline-start: 30px;
     padding: 30px;  
     justify-content: left;
+}
 
+.admmovie{
+  width: 100%;
 }
 
 form{
-    max-width: 350vw;
+    max-width: 70vw;
     padding: 1em;
     border: 1px solid #CCC;
     border-radius: 5px;
@@ -35,6 +37,11 @@ input[type=text],textarea {
 select{
     margin-inline-start: 10px;
     border: 3px solid #53354A;
+}
+
+.botones{
+  display: flex;
+  justify-content: center;
 }
 
 input[type=submit] {
@@ -61,4 +68,8 @@ input[type=submit] {
 
 #title{
     width: 98%;  
+}
+
+#description{
+  width: 100%;
 }

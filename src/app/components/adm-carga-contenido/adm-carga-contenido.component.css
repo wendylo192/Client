@@ -1,9 +1,11 @@
  * {
-    color: white;
-    font-family: 'Poppins', sans-serif;   
+    font-family: 'Poppins', sans-serif; 
+     
   }
 
   .container{
+    color:white;
+    margin-top:10% ; 
       display: grid;
       grid-template-columns: auto auto;
   }
@@ -39,7 +41,7 @@
   }
 
   input{
-    border: 3px solid #53354A;    
+    border: 3px solid #53354A; 
   }
 
   textarea{
@@ -47,7 +49,7 @@
   }
 
   input[type=text] {
-    max-width: 15vw;
+    width: 27vw;
     
   }
   input[type=number] {
@@ -60,12 +62,18 @@
     padding: 10px;
     max-width: 25vw;
     text-align: center;
+    color:white; 
   }
 
   input[type=submit]:hover {
-    background-color: #903749;  
+    background-color: #903749; 
   }
 
   input[type=years] {
     border: 3px solid #53354A; 
+  }
+
+  #description{
+    padding: 10px;
+    width: 27vw;
   }

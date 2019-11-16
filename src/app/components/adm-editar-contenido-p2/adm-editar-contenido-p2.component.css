@@ -15,8 +15,7 @@ justify-content: center;
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
-    overflow: hidden;
-    position: absolute;
+    /* position: absolute; "Causa el error del doble scroll"*/ 
     z-index: -1;  
 }
 
