@@ -936,6 +936,7 @@ h4 spam {
 
 
 .iklan {
+    text-align: center;
     position: absolute;
     left: 80%;
     bottom: 0;
@@ -947,6 +948,8 @@ h4 spam {
     box-shadow: 0 5px 10px rgba(0, 0, 0, .8);
     border-radius: 10px;
     z-index: 100;
+    justify-content: center;
+    font-size: 14px;
  }
  .iklan .suscribe {
     margin: 0 0 15px;
