@@ -6,22 +6,19 @@
                 <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
                     <div class="form-group">
                         <br>
-                        <input type="email" class="form-control" #email="ngModel" name="email" [(ngModel)]="user.email"
-                            placeholder="Email" autofocus>
+                        <input type="email" class="form-control" #email="ngModel" name="email" [(ngModel)]="user.email" placeholder="Email" autofocus>
                     </div>
                     <br>
                     <div class="form-group">
-                        <input type="password" #password="ngModel" name="password" [(ngModel)]="user.password"
-                            class="form-control" placeholder="Contraseña">
+                        <input type="password" #password="ngModel" name="password" [(ngModel)]="user.password" class="form-control" placeholder="Contraseña">
                     </div>
                     <br>
                     <div class="d-flex justify-content-around">
-                        <a href="http://localhost:3002/users/signup"> Registrarse</a>
+                        <div href="http://localhost:3002/users/signup"><input class="boton text-white" type="submit" value="Regístrarte"></div>
                         <!-- <a href="http://localhost:4200"> Iniciar Sesión</a> -->
+
+                        <input class="boton text-white" id="btnIngresar" type="submit" value="Ingresar">
                     </div>
-                    <div class="col-md-6 flotarLeft"><a href="http://localhost:4200"> Iniciar Sesión</a></div>
-                    <input id="btnIngresar" type="submit" value="Ingresar">
-                    <div class="clearfix"></div>
 
                 </form>
             </div>
