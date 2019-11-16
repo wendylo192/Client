@@ -9,9 +9,4 @@
     max-width: 25vw;
     text-align: center;
     color: white;
-    box-sizing: border-box;
-    border-width: 2px;
-    border-style: outset;
-    border-color: white;
-    border-image: initial;
 }
