@@ -132,6 +132,17 @@ header {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
     filter: alpha(opacity=30);
 }
+.blockpremium{
+
+    background:#903749;
+    position:absolute; 
+    top:90%;  
+    left:0px;
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+
+}
 
 .image h2 {
     position: absolute;
