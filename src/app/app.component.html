@@ -1,5 +1,18 @@
-<div [ngStyle]="{'min-height': clientHeight-footerHeight + 'px'}">
-    <app-header></app-header>
-    <router-outlet></router-outlet>
+<app-header #header (onClickOption)="setOption($event)"></app-header>
+<div *ngIf="option === 0">
+    <app-home></app-home>
 </div>
+<div *ngIf="option === 1">
+    <app-login (login)="onLogin($event)"></app-login>
+</div>
+<div *ngIf="option === 2">
+    <app-quienes-somos></app-quienes-somos>
+</div>
+<div *ngIf="option === 3">
+    <app-contenido></app-contenido>
+</div>
+<div *ngIf="option === 4">
+    <app-signup></app-signup>
+</div>
+
 <app-footer #footer></app-footer>

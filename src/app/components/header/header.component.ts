@@ -7,18 +7,15 @@ import { User } from '../../models/user';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-
-  logueado;
-  premium;
+  public logueado = false;
+  public premium = false;
   public user: User;
+
+  @Output() onClickOption: EventEmitter<Number> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
-    this.logueado = false;
-    this.premium = false;
-    console.log("entro oninit")
   }
 
   premiumClick(){
@@ -29,4 +26,13 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  setUser ( user ) {
+    this.logueado = true;
+    this.premium = user.role === 'PREMIUM';
+    this.user = user;
+  }
+
+  changeOption(option){
+    this.onClickOption.emit(option);
+  }
 }

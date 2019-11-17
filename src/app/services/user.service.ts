@@ -4,7 +4,7 @@ import { User } from '../models/user';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/x-www-form-urlencoded'
+    'Content-Type': 'application/json'
     })
 };
 
@@ -19,11 +19,11 @@ export class UserService {
 
   getUser ( user: User, hash: boolean ) {
     console.log(this.REST_GET_USER);
-    const body = JSON.stringify({email: user.email,
+    const body = {email: user.email,
       password: user.password,
-      gethash: hash});
+      gethash: hash};
     
-    return this.http.post(this.REST_GET_USER, body, httpOptions);
+      return this.http.post(this.REST_GET_USER, body, httpOptions);
 
     /* return this.http.post(this.REST_GET_USER, body.toString(), {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
