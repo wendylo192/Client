@@ -10,52 +10,68 @@ import { ContMultimediaComponent } from './components/cont-multimedia/cont-multi
 })
 export class AppComponent {
 
-  @ViewChild('header', {static: false}) header: HeaderComponent;
-  @ViewChild('contenidom', {static: true}) contMultimedia: ContMultimediaComponent;
+  @ViewChild('header', { static: false }) header: HeaderComponent;
+  @ViewChild('contenidom', { static: true }) contMultimedia: ContMultimediaComponent;
 
   option = 0;
   title = 'Client';
   clientHeight: number;
-  footerHeight: number;  
+  footerHeight: number;
 
   constructor(private userService: UserService) {
     this.clientHeight = window.innerHeight;
   }
 
-  onLogin (datos) {
-    if ( datos ) {
+  onLogin(datos) {
+    if (datos) {
       this.option = 0;
       this.header.setUser(datos.user);
     }
   }
-  
-  setOption(data){
+
+  setOption(data) {
     this.option = data;
   }
 
-  onSignUp(data){
-    if ( data.registro ){
+  onSignUp(data) {
+    if (data.registro) {
       this.setOption(5);
     }
   }
 
-  onPremium(datos){    
+  onPremium(datos) {
     this.header.user.role = "PREMIUM";
     this.userService.updateUser(this.header.user).subscribe(data => {
-      if ( data && data["message"] )
+      if (data && data["message"])
         alert("ERROR: " + data["message"]);
-      else{
+      else {
         this.setOption(7);
         this.header.premium = true;
       }
     });
   }
 
-  onReproducir(datos){
+  onReproducir(datos) {
     console.log("entro onreproducir")
     console.log(datos)
-    
     this.contMultimedia.movieParam = datos.movieParam;
-    this.setOption(8)
+
+    if (this.header.logueado) {
+      if (datos.movieParam.estado === "habilitado") {
+        if (this.header.premium) {
+          this.setOption(8)
+        } else {
+          this.setOption(6)
+        }
+      } else {
+        console.log("entra no premium")
+        this.setOption(8)
+      }
+
+    } else {
+      this.setOption(1)
+    }
+
+
   }
 }
