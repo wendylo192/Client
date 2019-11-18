@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { UserService } from './services/user.service';
+import { ContMultimediaComponent } from './components/cont-multimedia/cont-multimedia.component';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ import { UserService } from './services/user.service';
 export class AppComponent {
 
   @ViewChild('header', {static: false}) header: HeaderComponent;
+  @ViewChild('contenidom', {static: true}) contMultimedia: ContMultimediaComponent;
 
   option = 0;
   title = 'Client';
@@ -47,5 +49,13 @@ export class AppComponent {
         this.header.premium = true;
       }
     });
+  }
+
+  onReproducir(datos){
+    console.log("entro onreproducir")
+    console.log(datos)
+    
+    this.contMultimedia.movieParam = datos.movieParam;
+    this.setOption(8)
   }
 }

@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit {
     this.changeOption(0);
   }
 
-  onPremiun(){
+  onPremium(){
     this.changeOption(this.logueado?6:4);
   }
 }

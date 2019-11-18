@@ -9,7 +9,7 @@
     <app-quienes-somos></app-quienes-somos>
 </div>
 <div *ngIf="option === 3">
-    <app-contenido></app-contenido>
+    <app-contenido (contenido)="onReproducir($event)"></app-contenido>
 </div>
 <div *ngIf="option === 4">
     <app-signup (login)="onSignUp($event)"></app-signup>
@@ -27,4 +27,5 @@
         <p>SE CAMBIO CORRECTAMENTE</p>
     </div>
 </div>
+<app-cont-multimedia #contenidom ></app-cont-multimedia>
 <app-footer #footer></app-footer>

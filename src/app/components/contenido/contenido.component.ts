@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MoviesService } from 'src/app/services/movies.service';
 import { Movies } from 'src/app/models/movies';
 
@@ -10,6 +10,7 @@ import { Movies } from 'src/app/models/movies';
 })
 export class ContenidoComponent implements OnInit {
   
+  @Output() contenido: EventEmitter<any> = new EventEmitter();
   public movies: Movies;
   public peliculas: Movies[];
 
@@ -77,4 +78,10 @@ export class ContenidoComponent implements OnInit {
 	  this.mostrarAnime=false;  
   }
 
+
+  playMovie(movieParam){
+    console.log("entro playmovie")
+    console.log(movieParam)
+    this.contenido.emit({ movieParam: movieParam });
+  }
 }

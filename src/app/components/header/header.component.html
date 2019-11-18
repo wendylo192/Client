@@ -8,11 +8,11 @@
         <li><a (click)="changeOption(3)">Contenido</a></li>
         <i *ngIf="premium" class="fa fa-star amarillo"></i>
         <li id="infousuario">
-            <a (click)="changeOption(1)" *ngIf="logueado === false">Iniciar Sesión</a>            
+            <a (click)="changeOption(1)" *ngIf="logueado === false">Iniciar Sesión</a>
             <p class="texto-blanco" *ngIf="logueado === true">{{user.name}}</p>
         </li>
         <li>
-            <a (click)="onPremiun()" class="boton" *ngIf="!premium">Pásate a Premium</a>            
+            <a (click)="onPremium()" class="boton" *ngIf="!premium">Pásate a Premium</a>
         </li>
         <li>
             <a (click)="signOut()" *ngIf="logueado">
