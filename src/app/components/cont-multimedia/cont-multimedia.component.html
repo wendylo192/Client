@@ -12,14 +12,13 @@
 
     <div class="play">
 
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <!-- <iframe width="100%" height="540px" src="https://www.youtube.com/embed/qoCwCdAzySo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
         <div id="reproductor">
             <!-- controls (click)="toggleVideo()" -->
-            <video id="myVideo">
+            <video controls (click)="toggleVideo()" id="myVideo">
                 <source src="{{movieParam.ruta_video}}" type="video/mp4" />
                 Browser not supported
             </video>
@@ -57,3 +56,5 @@
         <img src="{{movieParam.ruta_imagen}}" alt="" width="240px">
     </div>
 </div>
+
+<script type="text/javascript" src="assets/js/video.js"></script>
