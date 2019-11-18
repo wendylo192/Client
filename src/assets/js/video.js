@@ -1,6 +1,6 @@
 window.onload = init;
 
-const FULL_SIZE = 900;
+const FULL_SIZE = 580;
 let video, reproductor, container, playlist;
 let minutes = 0,
     seconds = "00";
@@ -9,48 +9,44 @@ let correctAnswer = -1,
     selectedAnswer = 0;
 let item = [];
 let questions = [{
-        title: "¿Wich animal is the white big one?",
-        answer: ["Rabbit",
-            "Bird",
-            "Bear"
+        title: "¿Y qué esperas para volverte Premium?",
+        answer: ["Hagámoslo",
+            "Estoy Probando"
         ],
         correctAnswer: 1
     },
     {
-        title: '¿Wich animals are the bad ones?',
-        answer: ["Mouses",
-            "Squirrels",
-            "Aren't animals, are demons"
+        title: 'Hola!¿Sabias que siendo Premium no recibiras estos mensajes?',
+        answer: ["Quiero ser Premium",
+            "Más tarde"
         ],
-        correctAnswer: 2
+        correctAnswer: 1
     }, {
-        title: "¿Why squirrels want to kill butterflies?",
-        answer: ["Because there are pretty",
-            "Because they want to bother Buck Bunny",
-            "It's subjective and all answer are correct."
+        title: "¿Quisieras ver los últimos estrenos de cine?",
+        answer: ["Si, quiero ser Premium",
+            "Tal vez luego"
         ],
-        correctAnswer: 3
+        correctAnswer: 1
     }, {
-        title: '¿Where Buck Bunny lives?',
-        answer: ['In the desert',
-            'In a cave in the forest',
-            'He sleeps anywhere in the forest'
+        title: '¿Quieres ver más de 60 minutos de contenido?',
+        answer: ['Por favor, pásame a Premium',
+            'En un ratito'
         ],
-        correctAnswer: 2
+        correctAnswer: 1
     }
 ];
 
 let sources = [{
         name: "buck bunny",
-        src: "assets\video\BEN IS BACK Official Trailer (2018) Julia Roberts Lucas Hedges Drama Movie HD.mp4"
+        src: "https://buckbunny2.s3-sa-east-1.amazonaws.com/BigBuckBunny_320x180.mp4"
     },
     {
         name: "sintel",
-        src: "assets\video\BirdsofPrey.mp4"
+        src: "https://mainline.i3s.unice.fr/mooc/week2p1/video4.mp4"
     },
     {
         name: "caminandes",
-        src: "assets\video\COLOROUTOFSPACE.mp4"
+        src: "https://mainline.i3s.unice.fr/mooc/week2p1/video2.mp4"
     }
 ];
 
@@ -58,7 +54,7 @@ function init() {
     video = document.querySelector("#myVideo");
     reproductor = document.querySelector("#reproductor");
     container = document.querySelector(".container");
-    playlist = document.querySelectorAll('.playlist  [class*="itm"]');
+    // playlist = document.querySelectorAll('.playlist  [class*="itm"]');
     let progress = document.querySelector(".progress").addEventListener('click', seek);
 
     video.addEventListener("timeupdate", updateTime);
@@ -172,113 +168,118 @@ function playNextVideo(event) {
     video.play();
 }
 
-// //THE QUIZ
+//THE QUIZ
 
-// function quiz(question){
-//   let quizDiv = document.createElement("div");
-//   let button = document.createElement("button");
-//   let ul = document.createElement("ul");
-
-//   let span = [];
-//   let title = document.createElement("h2");
-
-//   quizDiv.setAttribute("id","quizDiv");
-
-//   for(var i = 0; i < 3; i++){
-//     item[i] = document.createElement("li");
-//     item[i].setAttribute('id', "item"+(i+1));
-//     item[i].addEventListener("click", selectAnswer);
-//     item[i].innerHTML = question.answer[i];
-//   }
-
-//   title.innerHTML = question.title;
+function quiz(question) {
 
 
-//   item.forEach(function(b,index){
-//     ul.append(item[index]);
-//   });
+    let quizDiv = document.createElement("div");
+    let button = document.createElement("button");
+    let ul = document.createElement("ul");
 
-//   quizDiv.append(title);
-//   quizDiv.append(ul);
+    let span = [];
+    let title = document.createElement("h2");
 
-//   button.setAttribute("id","check");
-//   button.addEventListener("click", checkAnswer);
-//   button.innerHTML = "CHECK";
-//   quizDiv.appendChild(button);
+    quizDiv.setAttribute("id", "quizDiv");
+    button.setAttribute("class", "qbutton");
+    ul.setAttribute("class", "qul");
 
-//   document.body.append(quizDiv);
-// }
+    for (var i = 0; i < 2; i++) {
+        item[i] = document.createElement("li");
+        item[i].setAttribute('id', "item" + (i + 1));
+        item[i].addEventListener("click", selectAnswer);
+        item[i].innerHTML = question.answer[i];
+    }
 
-// function destroyQuiz(){
+    title.innerHTML = question.title;
 
-// }
 
-// let flag = 0;
+    item.forEach(function(b, index) {
+        ul.append(item[index]);
+    });
 
-// function quizBuilder(){
-//   if((minutes == 1 && seconds == 23) && flag === 0 ){
-//     video.pause();
-//     quiz(questions[0]);
-//     correctAnswer = questions[0].correctAnswer;
-//     console.log("QUIZBUILDER: " + minutes + seconds);
-//     flag++;
-//   }else if((minutes == 3 && seconds == 54) && flag === 1){
-//     video.pause();
-//     quiz(questions[2]);
-//     correctAnswer = questions[2].correctAnswer;
-//     console.log("QUIZBUILDER: " + minutes + seconds);
-//     flag++;
-//   }
-//   else if((minutes == 4 && seconds == 46) && flag === 2){
-//     video.pause();
-//     quiz(questions[1]);
-//     correctAnswer = questions[1].correctAnswer;
-//     console.log("QUIZBUILDER: " + minutes + seconds);
-//     flag++;
-//   }
-//   else if((minutes == 7 && seconds == 44) && flag === 3){
-//     video.pause();
-//     quiz(questions[3]);
-//     correctAnswer = questions[3].correctAnswer;
-//     console.log("QUIZBUILDER: " + minutes + seconds);
-//     flag++;
-//   }
-// }
+    quizDiv.append(title);
+    quizDiv.append(ul);
 
-// function selectAnswer(event){
-//   console.log(event.target.id);
-//   selectedAnswer = event.target.id.substring(event.target.id.length-1);
+    button.setAttribute("id", "check");
+    button.addEventListener("click", checkAnswer);
+    button.innerHTML = "OK";
+    quizDiv.appendChild(button);
 
-// }
+    document.body.append(quizDiv);
+}
 
-// function checkAnswer(event){
-//   if(selectedAnswer === 0){
-//     console.log("Must choose at least one");
-//     return;
-//   }else if(selectedAnswer == correctAnswer){
-//     score++;
-//     item[selectedAnswer-1].style.backgroundColor = "green";
-//   }else{
-//     item[selectedAnswer-1].style.backgroundColor = "red";
-//   }
 
-//   setTimeout(function(){
-//     document.querySelector("#quizDiv").remove();
-//   },1000)
-//   playVideo();
-// }
+function destroyQuiz() {
 
-// //SHOW FINAL SCORE
+}
 
-// function showFinalScore(){
-//   var div = document.createElement("div");
-//   var title = document.createElement("h1");
-//   var result = document.createElement("h2");
+let flag = 0;
 
-//   title.innerHTML = "You final score is:";
-//   result.innerHTML = score + " / " + questions.length;
-//   div.append(title,result);
-//   div.setAttribute("id","quizDiv");
+function quizBuilder() {
+    if ((minutes == 0 && seconds == 5) && flag === 0) {
+        video.pause();
+        quiz(questions[0]);
+        correctAnswer = questions[0].correctAnswer;
+        console.log("QUIZBUILDER: " + minutes + seconds);
+        flag++;
+    } else if ((minutes == 00 && seconds == 30) && flag === 1) {
+        video.pause();
+        quiz(questions[1]);
+        correctAnswer = questions[2].correctAnswer;
+        console.log("QUIZBUILDER: " + minutes + seconds);
+        flag++;
+    } else if ((minutes == 1 && seconds == 00) && flag === 2) {
+        video.pause();
+        quiz(questions[2]);
+        correctAnswer = questions[2].correctAnswer;
+        console.log("QUIZBUILDER: " + minutes + seconds);
+        flag++;
+    } else if ((minutes == 1 && seconds == 30) && flag === 3) {
+        video.pause();
+        quiz(questions[3]);
+        correctAnswer = questions[3].correctAnswer;
+        console.log("QUIZBUILDER: " + minutes + seconds);
+        flag++;
+    } else if ((minutes == 2 && seconds == 00)) {
+        video.pause();
+        showFinalScore();
+        console.log("QUIZBUILDER: " + minutes + seconds);
+    }
+}
 
-//   document.body.append(div);
-// }
+function selectAnswer(event) {
+    console.log(event.target.id);
+    selectedAnswer = event.target.id.substring(event.target.id.length - 1);
+
+}
+
+function checkAnswer(event) {
+    if (selectedAnswer === 0) {
+        console.log("Must choose at least one");
+        return;
+    } else if (selectedAnswer == correctAnswer) {
+        score++;
+        item[selectedAnswer - 1].style.backgroundColor = "green";
+    } else {
+        item[selectedAnswer - 1].style.backgroundColor = "red";
+    }
+
+    setTimeout(function() {
+        document.querySelector("#quizDiv").remove();
+    }, 1000)
+    playVideo();
+}
+
+//SHOW FINAL SCORE
+
+function showFinalScore() {
+    var div = document.createElement("div");
+    var title = document.createElement("h1");
+
+    title.innerHTML = "Debes Pasarte a Premium para seguir viendo este contenido";
+    div.append(title);
+    div.setAttribute("id", "PremiumDiv");
+
+    document.body.append(div);
+}
