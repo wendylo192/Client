@@ -15,17 +15,17 @@
     <app-signup (login)="onSignUp($event)"></app-signup>
 </div>
 <div *ngIf="option === 5">
-    <div>
-        <p>SE REGISTRO CORRECTAMENTE</p>
+    <div class="registro">
+        <p style="position: absolute; margin:180px 0px 0px 110px; color: white; font-size: 4vh;"> BIENVENIDO!! <br> Tu registro fue exitoso, es hora de disfrutar de las mejores peliculas con BITFLIX</p>
     </div>
 </div>
 <div *ngIf="option === 6">
     <app-pago-premium-registrado (login)="onPremium($event)"></app-pago-premium-registrado>
 </div>
 <div *ngIf="option === 7">
-    <div>
-        <p>SE CAMBIO CORRECTAMENTE</p>
+    <div class="registro">
+        <p style="position: absolute; margin:180px 0px 0px 110px; color: white; font-size: 4vh;"> Super!! <br> Ahora eres parte del mejor club de películas online! tienes acceso a todos los estrenos sin publicidad :D </p>
     </div>
 </div>
-<app-cont-multimedia #contenidom ></app-cont-multimedia>
+<app-cont-multimedia #contenidom></app-cont-multimedia>
 <app-footer #footer></app-footer>

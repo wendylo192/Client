@@ -58,3 +58,10 @@
     width: 120px;
     height: 35px;
 }
+
+.registro {
+    background-image: url("assets/img/registro.jpg");
+    background-size: cover;
+    text-align: center;
+    height: 70vh;
+}
