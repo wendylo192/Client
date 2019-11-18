@@ -11,8 +11,13 @@
             <a (click)="changeOption(1)" *ngIf="logueado === false">Iniciar Sesión</a>            
             <p class="texto-blanco" *ngIf="logueado === true">{{user.name}}</p>
         </li>
-        <li><a (click)="changeOption(4)" class="boton" *ngIf="!premium" (click)="premiumClick()">Pásate a Premium</a>
-            <a href="http://localhost:3002/users/signin"><i *ngIf="logueado" class="fa fa-sign-out-alt fa-2x"></i> </a>
+        <li>
+            <a (click)="onPremiun()" class="boton" *ngIf="!premium">Pásate a Premium</a>            
+        </li>
+        <li>
+            <a (click)="signOut()" *ngIf="logueado">
+                <i *ngIf="logueado" class="fa fa-sign-out-alt fa-2x"></i>
+            </a>
         </li>
     </ul>
 </header>

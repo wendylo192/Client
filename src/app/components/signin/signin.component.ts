@@ -20,7 +20,7 @@ export class SigninComponent implements OnInit {
   }
 
   public onSubmit() {
-    this.userService.getUser(this.user, false).subscribe(data => {
+    this.userService.getUser(this.user).subscribe(data => {
       if ( data && data["message"] )
         alert("ERROR: " + data["message"]);
       else

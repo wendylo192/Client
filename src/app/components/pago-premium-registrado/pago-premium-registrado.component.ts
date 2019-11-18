@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-pago-premium-registrado',
@@ -7,14 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagoPremiumRegistradoComponent implements OnInit {
 
+  @Output() login: EventEmitter<any> = new EventEmitter();
+  metPago: String;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  btnClick(){
-    /* document.getElementById('pasate').style['display'] = 'none'; */
-    window.location.href = 'http://localhost:4200';
+  btn2Click(){
+    if (!this.metPago){ 
+      alert("Datos incompletos");
+      return;
+    } else {
+      this.login.emit({ premium: true });
+    }
+    
+  }
+
+  setMetPago(pago){
+    this.metPago = pago;
   }
 
 }

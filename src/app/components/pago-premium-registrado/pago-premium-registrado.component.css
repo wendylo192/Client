@@ -1,16 +1,13 @@
 .tex-center {
-   position: absolute;
-   width: 100vw;
-   height: 100vh;
-   background: rgba(0, 0, 0, .6);
-   top: 100px;
+   width: 40%;
+   margin: auto;
+   padding-top: 5%;
+   padding-bottom: 2%;
 }
 
 .contenedor-pago {
    padding: 3rem;
    background: #fff;
-   margin: auto;
-   width: 50%;
    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
 }
 
@@ -19,16 +16,12 @@
    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
 }
 
-.pagos {
-   display: grid;
-   width: 80%;
-   grid-template-columns: 50% 50%;
-   grid-template-rows: 50% 50%;
-   grid-column-gap: 40px;
-}
-
 .contenedor-botones-pago {
    padding-top: 3rem;
    display: flex;
    justify-content: space-around;
+}
+
+.metPagoLargo{
+   margin-left: 5px;
 }

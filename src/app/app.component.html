@@ -12,7 +12,19 @@
     <app-contenido></app-contenido>
 </div>
 <div *ngIf="option === 4">
-    <app-signup></app-signup>
+    <app-signup (login)="onSignUp($event)"></app-signup>
 </div>
-
+<div *ngIf="option === 5">
+    <div>
+        <p>SE REGISTRO CORRECTAMENTE</p>
+    </div>
+</div>
+<div *ngIf="option === 6">
+    <app-pago-premium-registrado (login)="onPremium($event)"></app-pago-premium-registrado>
+</div>
+<div *ngIf="option === 7">
+    <div>
+        <p>SE CAMBIO CORRECTAMENTE</p>
+    </div>
+</div>
 <app-footer #footer></app-footer>

@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
   clientHeight: number;
   footerHeight: number;  
 
-  constructor() {
+  constructor(private userService: UserService) {
     this.clientHeight = window.innerHeight;
   }
 
@@ -28,5 +29,23 @@ export class AppComponent {
   
   setOption(data){
     this.option = data;
+  }
+
+  onSignUp(data){
+    if ( data.registro ){
+      this.setOption(5);
+    }
+  }
+
+  onPremium(datos){    
+    this.header.user.role = "PREMIUM";
+    this.userService.updateUser(this.header.user).subscribe(data => {
+      if ( data && data["message"] )
+        alert("ERROR: " + data["message"]);
+      else{
+        this.setOption(7);
+        this.header.premium = true;
+      }
+    });
   }
 }

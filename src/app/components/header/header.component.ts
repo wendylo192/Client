@@ -18,14 +18,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  premiumClick(){
-    if(this.logueado == true){
-      document.getElementById('pasate').style['display'] = 'block';
-    } else {
-      window.location.href = 'http://localhost:3002/users/signin';
-    }
-  }
-
   setUser ( user ) {
     this.logueado = true;
     this.premium = user.role === 'PREMIUM';
@@ -34,5 +26,16 @@ export class HeaderComponent implements OnInit {
 
   changeOption(option){
     this.onClickOption.emit(option);
+  }
+
+  signOut(){
+    this.user = null;
+    this.logueado = false;
+    this.premium = false;
+    this.changeOption(0);
+  }
+
+  onPremiun(){
+    this.changeOption(this.logueado?6:4);
   }
 }
