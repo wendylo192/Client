@@ -23,20 +23,20 @@
                 </div>
                 <!-- Informaciòn sobre metodos de pago -->
                 <div class="row justify-content-center" id="pagos" *ngIf="pagos">
-                        <div>
-                        <input type="radio" (click)="setMetPago(0)" value="tarjCred"><img class="metPagoLargo" src="../../../assets/img/tarjetas_cred.png" alt="" width="100vw">
-                        &nbsp; &nbsp; <input type="radio" (click)="setMetPago(1)" value="pse"><img class="metPagoLargo" src="../../../assets/img/pse.png" alt="" width="100vw"> <br>
-                    </div> <br>
                     <div>
-                        <input type="radio" (click)="setMetPago(2)" value="efecty"><img class="metPagoLargo" src="../../../assets/img/efecty.png" alt="" width="100vw">
-                        &nbsp; &nbsp; <input type="radio" (click)="setMetPago(3)" value="baloto"><img class="metPagoLargo" src="../../../assets/img/baloto.png" alt="" width="100vw">
-                    </div></div>
-                    <br>
-                    <!-- boton -->
-                    <div class="d-flex justify-content-around" style="margin-top: 5px;">
-                        <input (click)="registro()" class="boton text-white" type="submit" value="Regístrarte">
-                    </div>
-                </form>
-            </div>
+                    <input type="radio" (click)="setMetPago(0)" value="tarjCred"><img class="metPagoLargo" src="../../../assets/img/tarjetas_cred.png" alt="" width="100vw">
+                    &nbsp; &nbsp; <input type="radio" (click)="setMetPago(1)" value="pse"><img class="metPagoLargo" src="../../../assets/img/pse.png" alt="" width="100vw"> <br>
+                </div> <br>
+                <div>
+                    <input type="radio" (click)="setMetPago(2)" value="efecty"><img class="metPagoLargo" src="../../../assets/img/efecty.png" alt="" width="100vw">
+                    &nbsp; &nbsp; <input type="radio" (click)="setMetPago(3)" value="baloto"><img class="metPagoLargo" src="../../../assets/img/baloto.png" alt="" width="100vw">
+                </div></div>
+                <br>
+                <!-- boton -->
+                <div class="d-flex justify-content-around" style="margin-top: 5px;">
+                    <input (click)="registro()" class="boton text-white" type="submit" value="Regístrarte">
+                </div>
+            </form>
         </div>
-     </div>
+    </div>
+ </div> 
