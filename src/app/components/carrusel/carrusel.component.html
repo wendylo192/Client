@@ -1,28 +1,29 @@
-<div>
-        <ngb-carousel>
-            <ng-template ngbSlide active>
-                <video class="d-block w-100" src="../../../assets/video/BirdsofPrey.mp4" height="400" data-ride="carousel" controls autoplay muted></video>
-                <div class="d-none d-md-block">
-                    <h5>Birds of Prey</h5>
-                </div>
+
+	 <div>
+        <ngb-carousel #mycarousel>
+            <ng-template ngbSlide >
+                <video #video1 class="d-block w-100" src="../../../assets/video/BirdsofPrey.mp4" height="400" data-ride="carousel" components autoplay controls muted></video>
+                 <div class="d-none d-md-block">
+                        <h5>Birds of Prey</h5>
+                    </div>
+            </ng-template>
+            <ng-template ngbSlide >
+                <video #video2  class="d-block w-100" src="../../../assets/video/COLOROUTOFSPACE.mp4" height="400" data-ride="carousel"  components controls muted></video>
+                 <div class="d-none d-md-block">
+                        <h5>Color Out of Space</h5>
+                    </div>
             </ng-template>
             <ng-template ngbSlide>
-                <video class="d-block w-100" src="../../../assets/video/COLOROUTOFSPACE.mp4" height="400" data-ride="carousel" controls autoplay muted></video>
+                <video #video3 class="d-block w-100" src="../../../assets/video/EvangelionUltimate.mp4" height="400" data-ride="carousel"  components controls muted></video>
                 <div class="d-none d-md-block">
-                    <h5>Color Out of Space</h5>
-                </div>
+                        <h5>Evangelion Ultimate</h5>
+                    </div>
             </ng-template>
             <ng-template ngbSlide>
-                <video class="d-block w-100" src="../../../assets/video/EvangelionUltimate.mp4" height="400" data-ride="carousel" controls autoplay muted></video>
-                <div class="d-none d-md-block">
-                    <h5>Evangelion Ultimate</h5>
-                </div>
-            </ng-template>
-            <ng-template ngbSlide>
-                <video class="d-block w-100" src="../../../assets/video/Your Name (Japanese).mp4" height="400" data-ride="carousel" controls autoplay muted></video>
-                <div class="d-none d-md-block">
-                    <h5>Your Name</h5>
-                </div>
+                <video #video4 class="d-block w-100" src="../../../assets/video/Your Name (Japanese).mp4" height="400" data-ride="carousel"  components controls muted></video>
+                 <div class="d-none d-md-block">
+                        <h5>Your Name</h5>
+                    </div>
             </ng-template>
         </ngb-carousel>
-     </div>
+    </div>

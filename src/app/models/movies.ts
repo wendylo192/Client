@@ -11,4 +11,3 @@ export class Movies{
      public  ruta_video: String
     ){}
 }
-
